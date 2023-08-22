@@ -1,0 +1,61 @@
+.inputSimulation {
+  height: 54px;
+}
+
+.wrapper {
+  margin-top: -1rem;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.todoList {
+  display: flex;
+  flex-direction: column;
+  min-width: 35%;
+  
+  .listHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-direction: row;
+    
+    font-size: 14;
+    font-weight: bold;
+  }
+
+  .listHeader span{
+    margin: 0 0.5rem;
+    padding: 0.125rem 0.5rem;
+    border-radius: 1rem;
+    background-color: var(--gray-400);
+    color: var(--gray-200);
+
+    font-size: 12;
+    font-weight: bold;
+  }
+
+  .listHeader .todoCreated {
+    color: var(--blue);
+  }
+
+  .listHeader .todoDone {
+    color: var(--purple);
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-top: 1.5rem;
+    padding: 1rem;
+
+    border-top: 1px solid var(--gray-400);
+    border-radius: 0.5rem;
+  }
+}
+
