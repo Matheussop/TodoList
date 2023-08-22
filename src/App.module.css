@@ -56,6 +56,13 @@
 
     border-top: 1px solid var(--gray-400);
     border-radius: 0.5rem;
+
+    .emptyList{
+      align-self: center;
+
+      margin-top: 4rem;
+    }
   }
+  
 }
 
