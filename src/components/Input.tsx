@@ -1,10 +1,10 @@
-import { itemListProps } from "../App";
 
-interface InputProps{
-  addList: (item: itemListProps) => void;
-}
-export function Input({addList}: InputProps) { 
+import styles from "./Input.module.css";
+
+export function InputText(props: React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>) { 
   return (
-    <div>Just a input</div>
+    <div className={styles.wrapper}>
+      <input type="text" placeholder="Adicione uma nova tarefa" {...props} />
+    </div>
   )
 }
