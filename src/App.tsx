@@ -27,10 +27,11 @@ function App() {
     
     const newItemList = { id: uuidv4(), text: valueInput }
     setTodoList(prevList => [...prevList, newItemList])
+    setValueInput("")
   }
 
-  const handleChangeText = (value: any) => {
-    setValueInput(value.target.value)
+  const handleChangeText = (value: React.FormEvent<HTMLInputElement>) => {
+    setValueInput(value.currentTarget.value)
   }
 
   const handleDeleteTodoItemList = (id: string) => {
@@ -49,12 +50,19 @@ function App() {
     }
   }
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      handleAddList()
+    }
+  };
+
   return (
     <>
       <Header/>
       <div className={styles.wrapper}>
         <div className={styles.inputWrapper}>
-          <InputText value={valueInput} onChange={handleChangeText}/>
+          <InputText value={valueInput} onChange={handleChangeText} 
+            onKeyDown={handleKeyDown}/>
           <Button text="Criar" onClick={handleAddList} icon={<PlusCircle />}/>
         </div>
 
