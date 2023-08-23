@@ -35,9 +35,14 @@ function App() {
   }
 
   const handleDeleteTodoItemList = (id: string) => {
+    setTodoListFinished(prevList => prevList.filter((item) => {
+      return item !== id
+    }))
+
     setTodoList(todoList.filter((item) => {
       return item.id !== id
     }))
+    
   }
 
   const handleSelectedItem = (isSelected: boolean, id: string) => {

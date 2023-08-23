@@ -4,12 +4,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  width: 100%;
+  height: 100%;
 
   border-radius: 10px;
   border: none;
-  padding: 16px;
 
   background-color: var(--gray-500);
   color: var(--gray-300);
@@ -17,7 +15,7 @@
   margin-bottom: 0.8rem;
 
   max-width: 1000px;
-
+  padding: 16px;
 }
 
 .wrapper div {
@@ -25,13 +23,25 @@
   align-items: center;
   flex-direction: row;
   gap: 0.8rem;
+  
+  width: 100%;
 }
 
-.wrapper div p {
+.wrapper div button {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  text-align: start;
+
+  width: 100%;
+}
+
+.wrapper div button p {
   max-width: 95%;
+  align-items: flex-start;
 }
 
-.wrapper div .selectable{
+.wrapper div button .selectable{
   text-decoration: line-through;
 }
 
@@ -47,9 +57,7 @@
   box-shadow: none;
 }
 
-.wrapper div button{
-  height: 1.5rem;
-}
+
 
 .btnTrash {
   border-radius: 5px;
@@ -61,4 +69,12 @@
 .btnTrash:hover {
   background-color: var(--gray-400);
   color: var(--danger);
+}
+
+
+@media (max-width: 1440px) {
+  .wrapper div button p {
+    max-width: 90%;
+  }
+  
 }

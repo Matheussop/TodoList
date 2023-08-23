@@ -45,8 +45,8 @@ export function TodoItem({textItem, onClickTrash, onSelected}: TodoItemProps) {
                 size="1.5rem" color="#4EA8DE">
               </Circle>)
           }
+          <p className={isSelected ? styles.selectable : ''} >{textItem}</p>
         </button>
-        <p className={isSelected ? styles.selectable : ''} >{textItem}</p>
       </div>
 
       <button onClick={onClickTrash} className={styles.btnTrash}>
