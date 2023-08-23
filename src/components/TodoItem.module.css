@@ -35,11 +35,30 @@
   text-decoration: line-through;
 }
 
+.wrapper div button .selectable:hover{
+  fill: #8284FA;
+}
+
 .wrapper button{
   background: transparent;
   border: none;
   color: var(--gray-300);
 
   box-shadow: none;
+}
+
+.wrapper div button{
   height: 1.5rem;
+}
+
+.btnTrash {
+  border-radius: 5px;
+
+  display: flex;
+  padding: 4px;
+}
+
+.btnTrash:hover {
+  background-color: var(--gray-400);
+  color: var(--danger);
 }

@@ -16,3 +16,7 @@
   gap: 0.5rem;
 }
 
+.wrapper button:hover{
+  background-color: var(--blue);
+  color: var(--gray-100);
+}
