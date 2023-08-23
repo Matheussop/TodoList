@@ -16,6 +16,7 @@
 
   margin-bottom: 0.8rem;
 
+  max-width: 1000px;
 
 }
 
@@ -26,12 +27,19 @@
   gap: 0.8rem;
 }
 
+.wrapper div p {
+  max-width: 95%;
+}
+
+.wrapper div .selectable{
+  text-decoration: line-through;
+}
+
 .wrapper button{
   background: transparent;
   border: none;
   color: var(--gray-300);
 
-  cursor: pointer;
   box-shadow: none;
 
 }

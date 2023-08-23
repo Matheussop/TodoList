@@ -15,6 +15,7 @@ export interface ItemListProps {
 }
 function App() {
   const [todoList, setTodoList] = useState<ItemListProps[]>([] as ItemListProps[])
+  const [todoListFinished, setTodoListFinished] = useState<string[]>([])
   const [valueInput, setValueInput] = useState("")
 
 
@@ -38,6 +39,16 @@ function App() {
     }))
   }
 
+  const handleSelectedItem = (isSelected: boolean, id: string) => {
+    if (isSelected) {
+      setTodoListFinished(prevList => [...prevList, id])
+    } else {
+      setTodoListFinished(prevList => prevList.filter((item) => {
+        return item!== id
+      }))
+    }
+  }
+
   return (
     <>
       <Header/>
@@ -54,7 +65,7 @@ function App() {
                 Tarefas criadas
               </p>
               <span>
-                0
+                {todoList.length}
               </span>
             </div>
             <div className={styles.todoDone}>
@@ -62,7 +73,7 @@ function App() {
                 Concluídas
               </p>
               <span>
-                0
+                {todoListFinished.length} de {todoList.length} 
               </span>
             </div>
           </div>
@@ -71,7 +82,12 @@ function App() {
               (<div className={styles.list}>
                 { todoList.map((item) => {
                     return (
-                      <TodoItem onClick={() => handleDeleteTodoItemList(item.id)} key={item.id} textItem={item.text}/>
+                      <TodoItem 
+                        onClickTrash={() => handleDeleteTodoItemList(item.id)} 
+                        onSelected={(isSelected) =>
+                           handleSelectedItem(isSelected, item.id)}
+                        key={item.id} 
+                        textItem={item.text}/>
                     )
                   })
                 }
