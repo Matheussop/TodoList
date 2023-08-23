@@ -1,5 +1,5 @@
 import styles from "./Button.module.css";
-import React, { cloneElement} from 'react';
+import { cloneElement} from 'react';
 
 interface ButtonProps {
   text: string;

@@ -31,6 +31,13 @@ function App() {
   const handleChangeText = (value: any) => {
     setValueInput(value.target.value)
   }
+
+  const handleDeleteTodoItemList = (id: string) => {
+    setTodoList(todoList.filter((item) => {
+      return item.id !== id
+    }))
+  }
+
   return (
     <>
       <Header/>
@@ -43,17 +50,17 @@ function App() {
         <div className={styles.todoList}>
           <div className={styles.listHeader}>
             <div className={styles.todoCreated}>
-              <text>
+              <p>
                 Tarefas criadas
-              </text>
+              </p>
               <span>
                 0
               </span>
             </div>
             <div className={styles.todoDone}>
-              <text>
+              <p>
                 Concluídas
-              </text>
+              </p>
               <span>
                 0
               </span>
@@ -64,7 +71,7 @@ function App() {
               (<div className={styles.list}>
                 { todoList.map((item) => {
                     return (
-                      <TodoItem key={item.id} text={item.text}/>
+                      <TodoItem onClick={() => handleDeleteTodoItemList(item.id)} key={item.id} textItem={item.text}/>
                     )
                   })
                 }

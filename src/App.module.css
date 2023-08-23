@@ -47,10 +47,12 @@
 
   .listHeader .todoCreated {
     color: var(--blue);
+    display: flex;
   }
 
   .listHeader .todoDone {
     color: var(--purple);
+    display: flex;
   }
 
   .container{
@@ -72,7 +74,7 @@
     }
 
     .list {
-      
+      width: 100%;
     }
   }
   

@@ -1,8 +1,10 @@
 .wrapper {
   width: 100%;
-}
 
-.wrapper p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   width: 100%;
 
   border-radius: 10px;
@@ -11,4 +13,25 @@
 
   background-color: var(--gray-500);
   color: var(--gray-300);
+
+  margin-bottom: 0.8rem;
+
+
+}
+
+.wrapper div {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.8rem;
+}
+
+.wrapper button{
+  background: transparent;
+  border: none;
+  color: var(--gray-300);
+
+  cursor: pointer;
+  box-shadow: none;
+
 }
