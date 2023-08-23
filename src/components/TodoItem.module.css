@@ -1,0 +1,14 @@
+.wrapper {
+  width: 100%;
+}
+
+.wrapper p {
+  width: 100%;
+
+  border-radius: 10px;
+  border: none;
+  padding: 16px;
+
+  background-color: var(--gray-500);
+  color: var(--gray-300);
+}
