@@ -17,3 +17,5 @@ Conceitos abordados para construção da aplicação
 - Listas e chaves no ReactJS
 - Propriedades
 - Componentização
+
+![](src/assets/todoList.png "Screen")
